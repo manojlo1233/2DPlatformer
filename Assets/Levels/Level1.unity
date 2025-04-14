@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 236309287}
   - component: {fileID: 236309286}
   - component: {fileID: 236309285}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -567,6 +567,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!95 &1340687611
 Animator:
   serializedVersion: 7
