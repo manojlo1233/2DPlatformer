@@ -30,7 +30,7 @@ public class Health : MonoBehaviour
         if (currentHealt > 0)
         {
             anim.SetTrigger("hurt");
-            StartCoroutine(Invunerability());
+            StartCoroutine(Invulnerability());
         }
         else
         {
@@ -48,7 +48,7 @@ public class Health : MonoBehaviour
         currentHealt = Mathf.Clamp(currentHealt + _value, 0, startingHealth);
     }
 
-    private IEnumerator Invunerability()
+    private IEnumerator Invulnerability()
     {
         Physics2D.IgnoreLayerCollision(8, 9, true);
         for (int i = 0; i < numberOfFlashes; i++)
