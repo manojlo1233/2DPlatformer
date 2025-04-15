@@ -1,18 +1,25 @@
+using System.Collections;
 using UnityEngine;
 
 public class Health : MonoBehaviour
 {
-
+    [Header ("Health")]
     public float startingHealth;
     public float currentHealt { get; private set; }
     private Animator anim;
     private bool dead;
+
+    [Header("iFrames")]
+    public float iFramesDuration;
+    public int numberOfFlashes;
+    SpriteRenderer spriteRend;
 
     private void Awake()
     {
         dead = false;
         currentHealt = startingHealth;
         anim = GetComponent<Animator>();
+        spriteRend = GetComponent<SpriteRenderer>();
     }
 
     public void TakeDamage(float _damage)
@@ -23,6 +30,7 @@ public class Health : MonoBehaviour
         if (currentHealt > 0)
         {
             anim.SetTrigger("hurt");
+            StartCoroutine(Invunerability());
         }
         else
         {
@@ -38,5 +46,18 @@ public class Health : MonoBehaviour
     public void addHealth(float _value)
     {
         currentHealt = Mathf.Clamp(currentHealt + _value, 0, startingHealth);
+    }
+
+    private IEnumerator Invunerability()
+    {
+        Physics2D.IgnoreLayerCollision(8, 9, true);
+        for (int i = 0; i < numberOfFlashes; i++)
+        {
+            spriteRend.color = new Color(1, 0, 0, 0.5f);
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+            spriteRend.color = Color.white;
+            yield return new WaitForSeconds(iFramesDuration / (numberOfFlashes * 2));
+        }
+        Physics2D.IgnoreLayerCollision(8, 9, false);
     }
 }
