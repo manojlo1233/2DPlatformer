@@ -143,6 +143,8 @@ MonoBehaviour:
   components:
   - {fileID: 1918470724187232874}
   - {fileID: 6846592159302259864}
+  deathSound: {fileID: 8300000, guid: c40a0f222645fd7459a34c43ee18214e, type: 3}
+  hurtSound: {fileID: 8300000, guid: 4eea5e7f87463e7429b307cc823f8941, type: 3}
 --- !u!114 &1918470724187232874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +170,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  fireballSound: {fileID: 8300000, guid: 17f34207d031bbf4e994b0cc62286ddc, type: 3}
 --- !u!114 &6846592159302259864
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ea58280de55fb489804afa2ffe7e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  jumpSound: {fileID: 8300000, guid: b66edc05c37e65c4e9fdce0597f0c523, type: 3}
   speed: 10
   jumpPower: 10
   groundLayer:

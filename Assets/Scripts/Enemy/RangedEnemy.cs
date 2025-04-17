@@ -14,6 +14,8 @@ public class NewMonoBehaviourScript : MonoBehaviour
     public BoxCollider2D boxCollider;
     [Header("Player Layer")]
     public LayerMask playerLayer;
+    [Header("Fireball Sound")]
+    public AudioClip fireballSound;
 
     private float cooldownTimer = Mathf.Infinity;
 
@@ -65,6 +67,7 @@ public class NewMonoBehaviourScript : MonoBehaviour
 
     private void RangedAttack()
     {
+        SoundManager.instance.PlaySound(fireballSound);
         cooldownTimer = 0;
         int index = FindFireball();
         fireballs[index].transform.position = firepoint.position;

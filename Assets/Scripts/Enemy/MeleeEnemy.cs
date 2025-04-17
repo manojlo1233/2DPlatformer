@@ -11,7 +11,8 @@ public class MeleeEnemy : MonoBehaviour
     public BoxCollider2D boxCollider;
     [Header("Player Layer")]
     public LayerMask playerLayer;
-
+    [Header("Attack Sound")]
+    public AudioClip attackSound;
     private float cooldownTimer = Mathf.Infinity;
 
     // References
@@ -30,9 +31,10 @@ public class MeleeEnemy : MonoBehaviour
 
         if (PlayerInSight())
         {
-            if (cooldownTimer > attackCooldown)
+            if (cooldownTimer > attackCooldown && playerHealth.currentHealt > 0)
             {
                 cooldownTimer = 0;
+                SoundManager.instance.PlaySound(attackSound);
                 anim.SetTrigger("meleeAttack");
             }
         }

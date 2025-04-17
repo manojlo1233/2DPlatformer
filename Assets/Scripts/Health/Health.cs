@@ -16,7 +16,9 @@ public class Health : MonoBehaviour
 
     [Header("Components")]
     public Behaviour[] components;
-
+    [Header("Death sound")]
+    public AudioClip deathSound;
+    public AudioClip hurtSound;
     private bool invulnerable;
 
     private void Awake()
@@ -35,6 +37,7 @@ public class Health : MonoBehaviour
         if (currentHealt > 0)
         {
             anim.SetTrigger("hurt");
+            SoundManager.instance.PlaySound(hurtSound);
             StartCoroutine(Invulnerability());
         }
         else
@@ -42,14 +45,13 @@ public class Health : MonoBehaviour
             if (!dead)
             {
                 anim.SetTrigger("die");
-               
                 // Deactivate all atached components
                 foreach (Behaviour comp in components)
                 {
                     comp.enabled = false;
                 }
-
                 dead = true;
+                SoundManager.instance.PlaySound(deathSound);
             }
         }
     }

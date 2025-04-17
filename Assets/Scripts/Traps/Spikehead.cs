@@ -7,6 +7,8 @@ public class Spikehead : EnemyDamage
     public float range;
     public float checkDelay;
     public LayerMask playerLayer;
+    [Header("SFX")]
+    public AudioClip impactSound;
     private float checkTimer;
     private Vector3 destination;
     private bool attacking;
@@ -64,6 +66,7 @@ public class Spikehead : EnemyDamage
 
     private new void OnTriggerEnter2D(Collider2D collision)
     {
+        SoundManager.instance.PlaySound(impactSound);
         base.OnTriggerEnter2D(collision);
         Stop();
     }
