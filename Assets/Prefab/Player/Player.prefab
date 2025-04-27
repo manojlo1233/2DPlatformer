@@ -183,15 +183,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 39ea58280de55fb489804afa2ffe7e26, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpSound: {fileID: 8300000, guid: b66edc05c37e65c4e9fdce0597f0c523, type: 3}
   speed: 10
   jumpPower: 10
+  coyoteTime: 0.25
+  extraJumps: 1
+  wallJumpX: 700
+  wallJumpY: 350
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
   wallLayer:
     serializedVersion: 2
     m_Bits: 128
+  jumpSound: {fileID: 8300000, guid: b66edc05c37e65c4e9fdce0597f0c523, type: 3}
 --- !u!61 &3306586774259985722
 BoxCollider2D:
   m_ObjectHideFlags: 0
