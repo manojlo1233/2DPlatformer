@@ -76,7 +76,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else
         {
-            body.gravityScale = 3.2f;
+            body.gravityScale = 5f;
             body.linearVelocity = new Vector2(horizontalInput * speed, body.linearVelocity.y);
             if (isGrounded())
             {

@@ -41,6 +41,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8721654277801897291}
   - component: {fileID: 5535240884842255143}
+  - component: {fileID: 3192657897199441682}
   - component: {fileID: 5391870647574541933}
   - component: {fileID: 1918470724187232874}
   - component: {fileID: 6846592159302259864}
@@ -125,6 +126,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3192657897199441682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7296526313864916313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 240543815e46fad449dee0cd7c142880, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointSound: {fileID: 8300000, guid: e8c1e076ecd959740ae963a71fefaf73, type: 3}
 --- !u!114 &5391870647574541933
 MonoBehaviour:
   m_ObjectHideFlags: 0

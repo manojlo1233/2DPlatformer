@@ -48,4 +48,12 @@ public class EnemySideways : MonoBehaviour
             collision.GetComponent<Health>().TakeDamage(damage);
         }
     }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<Health>().TakeDamage(damage);
+        }
+    }
 }
