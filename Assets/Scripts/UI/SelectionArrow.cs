@@ -6,8 +6,9 @@ public class SelectionArrow : MonoBehaviour
     public RectTransform[] options;
     public AudioClip changeSound;
     public AudioClip interactSound;
+    public int currentPosition;
     private RectTransform rect;
-    private int currentPosition;
+    
     private void Awake()
     {
         rect = GetComponent<RectTransform>();
