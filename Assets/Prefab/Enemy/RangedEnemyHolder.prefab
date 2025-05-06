@@ -298,7 +298,6 @@ MonoBehaviour:
   iFramesDuration: 0
   numberOfFlashes: 0
   components:
-  - {fileID: 0}
   - {fileID: 8385608979111816560}
   deathSound: {fileID: 8300000, guid: c40a0f222645fd7459a34c43ee18214e, type: 3}
   hurtSound: {fileID: 8300000, guid: 4eea5e7f87463e7429b307cc823f8941, type: 3}
